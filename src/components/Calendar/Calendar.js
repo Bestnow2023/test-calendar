@@ -56,13 +56,7 @@ const Calendar = () => {
     return days;
   };
 
-  useEffect(() => {
-    if (events.length === 0) return;
-    console.log('------------------------------->', events);
-  }, [events]);
-
   const getEventsOnDate = (date) => {
-    console.log('------------>', events);
     return events.filter(event => {
       const eventDate = new Date(event.launchDate);
       return (
