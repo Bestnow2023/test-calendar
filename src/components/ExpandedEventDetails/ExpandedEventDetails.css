@@ -1,0 +1,99 @@
+/* Styles for the row containing expanded event details */
+.event-details-row {
+  align-items: center;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+/* Styles for the container of expanded event details */
+.expanded-event-details {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+/* Styles for the expanded event image */
+.expanded-event-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Styles for the text content of expanded event details */
+.expanded-event-text {
+  position: absolute;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  left: 3%; /* Adjusted left percentage */
+  top: 50%;
+  transform: translate(3%, -50%); /* Adjusted transform percentage */
+
+  /* Styles for paragraphs within the text content */
+  p {
+    font-size: 10px;
+    width: 50%;
+  }
+
+  /* Styles for blue and red buttons */
+  .blue-btn, .red-btn {
+    color: #fff;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 10px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+  }
+
+  /* Styles for the blue button */
+  .blue-btn {
+    background-color: #2e6ec5;
+    margin-right: 10px;
+  }
+
+  /* Styles for the red button */
+  .red-btn {
+    background-color: #c54820;
+  }
+}
+
+/* Styles for the spinner animation */
+.spinner {
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+
+  /* Styles for the growing animation of the spinner */
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 2px;
+    background-color: #2b67b7;
+    animation: growSpinner 1.5s linear infinite;
+  }
+}
+
+/* Keyframes for the growing animation of the spinner */
+@keyframes growSpinner {
+  0% {
+    width: 0;
+    left: 50%;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
